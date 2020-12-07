@@ -189,6 +189,15 @@ Returns a basic correlation method across all columns.
  - `method` (default `pearson`) - Which type of correlation to use [`pearson`, `kendall`, `spearman`]. Can also take a custom implementation.
  - `min_periods` (default `1`) - minimum number of observations to have a valid result. Only works with `pearson` and `spearman`.
 
+Plotting correlations is usually good for eyeballing the trends. `seaborn` does this really well:
+
+```
+import seaborn as sn
+import matplotlib.pyplot as plt
+
+sn.heatmap(df.corr())
+plt.show()
+```
 
 
 ## References
