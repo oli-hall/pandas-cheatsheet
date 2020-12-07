@@ -1,4 +1,4 @@
-# pandas-cheatsheet
+# Pandas CheatSheet
 
 Handy tips and tricks for working with Pandas DataFrames. Focused around the basics of exploring a dataset. WIP, may expand later.
 
@@ -8,7 +8,7 @@ Handy tips and tricks for working with Pandas DataFrames. Focused around the bas
 This project assumes you have Python 3 on your system, and has been tested on OS X, though *should* work on Linux as well. Other pre-requisites:
 
 1. `pip` - the [python package manager](https://pip.pypa.io/en/stable/). Should come with official Python 3 >= 3.4.
-2. [`virtualenv`](https://virtualenv.pypa.io/en/stable/) - A tool for creating sandboxes for installing python packages within. Can be installed with `pip install virtualenv`
+2. [`virtualenv`](https://virtualenv.pypa.io/en/stable/) - A tool for creating sandboxes for python packages. Can be installed with `pip install virtualenv`
 
 
 ### Set up a Virtual Environment
