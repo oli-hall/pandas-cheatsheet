@@ -6,7 +6,7 @@ Handy tips and tricks for working with Pandas DataFrames. Focused around the bas
 
 There's a Jupyter Notebook included with this repo, both for quick reference and for playing around with example data.
 
- - [Pandas DataFrames](Pandas\ DataFrames.ipynb)
+ - [Pandas DataFrames](<Pandas\ DataFrames.ipynb>)
 
 
 
