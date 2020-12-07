@@ -124,6 +124,10 @@ OR
 
 `df.column`
 
+Multi-column selection:
+
+`df[["column1", "column2", "column3"]]`
+
 Checking the size of a DataFrame:
 
 `df.shape`
@@ -131,6 +135,15 @@ Checking the size of a DataFrame:
 Finding how many unique values there are in a particular column:
 
 `len(df.<column>.unique())`
+
+Drop a column (to simplify data, or for removing columns with little/no information):
+
+`df.drop(<column>)`
+
+*Useful params:*
+ - `inplace` (default `False`) - whether to perform the operation on the same DF, or return it as a new DF.
+ - `columns` - single label or list of labels. Shorthand for `(labels, axis=1)`.
+ - `index` - single label or list of labels. Shorthand for `(labels, axis=0)`.
 
 
 #### Casting columns
