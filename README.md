@@ -2,6 +2,18 @@
 
 Handy tips and tricks for working with Pandas DataFrames. Focused around the basics of exploring a dataset. WIP, may expand later.
 
+## Notebooks
+
+There's a Jupyter Notebook included with this repo, both for quick reference and for playing around with example data.
+
+ - [Pandas DataFrames](Pandas\ DataFrames.ipynb)
+
+
+
+## Useful Links
+
+ - [Pandas API Docs](https://pandas.pydata.org/pandas-docs/stable/reference/index.html)
+
 
 ## Getting started
 
