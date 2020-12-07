@@ -172,6 +172,10 @@ To plot all columns on the same chart:
  - `bins` (default `10`) - The number of buckets/bins to group data into.
  - `alpha` (`float`, default `1.0`) - The transparency. Setting to < 1.0 makes overlapping visible.
 
+Scatter plots are also a useful quick gauge of correlations/trends between columns. Again, this is built into Pandas:
+
+`df.plot.scatter(x=<x-column>, y=<y-column>)`
+
 
 #### Correlation
 
