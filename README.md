@@ -173,5 +173,17 @@ To plot all columns on the same chart:
  - `alpha` (`float`, default `1.0`) - The transparency. Setting to < 1.0 makes overlapping visible.
 
 
+#### Correlation
+
+Pandas has column correlation built in, useful for identifying which columns may be related. Correlation is in a range from -1.0 to 1.0. 1.0 equals perfect positive correlation (when `x` goes up, `y` goes up), -1.0 is perfect negative correlation (when `x` goes up, `y` goes down), and values close to zero indicate weak/no correlation.
+
+`df.corr()`
+
+Returns a basic correlation method across all columns.
+
+*Useful params:*
+ - `method` (default `pearson`) - Which type of correlation to use [`pearson`, `kendall`, `spearman`]. Can also take a custom implementation.
+ - `min_periods` (default `1`) - minimum number of observations to have a valid result. Only works with `pearson` and `spearman`.
+
 
 
