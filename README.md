@@ -6,8 +6,8 @@ Handy tips and tricks for working with Pandas DataFrames. Focused around the bas
 
 There's a Jupyter Notebook included with this repo, both for quick reference and for playing around with example data.
 
- - [Pandas DataFrames](<Pandas\ DataFrames.ipynb>)
-
+ - [Pandas DataFrames](<Pandas\ DataFrames.ipynb>) - some basic examples of key commands with dummy datasets
+ - [Worked Example](<Worked\ Example.ipynp>) - some experimentation in a real dataset (WIP, to be expanded)
 
 
 ## Useful Links
@@ -70,7 +70,9 @@ Reading from CSV to a dataframe:
 
 `df = pd.read_csv(<filehandle>)`
 
-This will read in a CSV, and will try and infer datatypes.
+`df = pd.read_csv(<path to file>)`
+
+This will read in a CSV and try to infer datatypes.
 
 *Useful params:*
 
@@ -152,7 +154,7 @@ Four main methods on DataFrames for casting:
 
  - `pd.to_numeric()` - converts columns to a numeric type. Has various options for ignoring errors, coercing, picking smallest datatype.
  - `df.astype()` - force types. Can do multi-type casting (`df.astype({"a": int, "b": complex})`). A rather blunt tool.
- - `pd.infer_objects()` - infers types for columns of type `object`.
+ - `df.infer_objects()` - infers types for columns of type `object`.
  - `pd.convert_dtypes()` - convert types to the best types that support missing values.
 
 Example usage:
