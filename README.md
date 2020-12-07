@@ -147,6 +147,44 @@ Drop a column (to simplify data, or for removing columns with little/no informat
  - `columns` - single label or list of labels. Shorthand for `(labels, axis=1)`.
  - `index` - single label or list of labels. Shorthand for `(labels, axis=0)`.
 
+Define an existing column as the index of the DataFrame (can be useful for lookups, etc).
+
+`df.set_index(<column>)`
+
+*Useful params:*
+ - `inplace` (default `False`) - whether to perform the operation on the same DF, or return it as a new DF.
+
+It can be useful to check uniqueness before doing this. DF indices don't have to be unique, but operations will generally perform better if they are.
+
+```
+> df[<column>].is_unique
+True
+```
+
+Renaming columns is also fairly common:
+
+`df.rename(columns=<new_names>, inplace=True)`
+
+Converting columns (sometimes crudely) into numeric values from a collection of strings is a pretty common cleaning operation.
+
+`df[<new_col>] = pd.to_numeric(df[<col_to_parse>].str.extract(r'<some regex>', expand=False))`
+
+(`expand` here will return a DF with a column per regex group if set to `True`, otherwise a Series if there's only one, and a DF if there are multiple)
+
+Numpy `where` is also very powerful for processing strings, with a simple `condition`, `then`, `else` syntax:
+
+```
+col_to_parse = df[<some_col>]
+search = col_to_parse.str.contains["search"]
+df[<new_col>] = np.where(search, "replacement", col_to_parse.str.replace("-", " "))
+```
+
+So this searches `some_col` for `"search"`, replacing it with `"replacement"` if found. If it doesn't find `"search"`, it defaults to the other replace expression, which replaces hyphens with spaces.
+
+`np.where` can also be chained:
+
+`np.where(<check1>, <replacement1>, np.where(<check2>, <replacement2>, <default case>))`
+
 
 #### Casting columns
 
@@ -229,3 +267,6 @@ Correlation
 
 Scatter plots:
  - https://data36.com/scatter-plot-pandas-matplotlib/
+
+General column operations and common cleaning operations:
+ - https://realpython.com/python-data-cleaning-numpy-pandas/
