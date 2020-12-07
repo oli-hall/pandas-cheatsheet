@@ -104,6 +104,10 @@ A quick overview of a DataFrame:
 
 Returns counts, mean, standard deviation, min, max, and 25/50/75% percentiles for each column.
 
+`df.info()` also gives things like the number of non-null entries in each column. Checking for nulls is also useful:
+
+`df.isnull().sum()` will give the inverse - the number of null entries.
+
 Look at the first/last few rows:
 
 `df.head()`
@@ -146,6 +150,26 @@ Drop a column (to simplify data, or for removing columns with little/no informat
  - `inplace` (default `False`) - whether to perform the operation on the same DF, or return it as a new DF.
  - `columns` - single label or list of labels. Shorthand for `(labels, axis=1)`.
  - `index` - single label or list of labels. Shorthand for `(labels, axis=0)`.
+
+Related, if you want to drop columns with nulls:
+
+`df.dropna()`
+
+*Useful params:*
+ - `inplace` (default `False`) - whether to perform the operation on the same DF, or return it as a new DF.
+ - `axis` - which dimension to consider nulls across [`columns` or `index`, alternatively `1` or `0`].
+ - `how` - either `any` which will drop the column if *any* values are null, or `all`, which drops if all are null.
+ - `thresh` - sets a minimum number of non-null elements within a row/column to prevent it being dropped.
+ - `subset` - a subset of columns to consider.
+
+Fill in nulls with a default value:
+
+`df.fillna()`
+
+*Useful params:*
+ - `inplace` (default `False`) - whether to perform the operation on the same DF, or return it as a new DF.
+ - `value` - value to fill in nulls with. Can either be a single value, or a dict that maps different values to each column (columns not in the dict won't be filled)
+ - `method` - specify a way of filling in gaps in the dataset from previous/next values. [`backfill`, `bfill`, `pad`, `ffill`, `None`]
 
 Define an existing column as the index of the DataFrame (can be useful for lookups, etc).
 
