@@ -90,6 +90,12 @@ A quick overview of a DataFrame:
 
 Returns counts, mean, standard deviation, min, max, and 25/50/75% percentiles for each column.
 
+Look at the first/last few rows:
+
+`df.head()`
+
+`df.tail()`
+
 Listing columns in a DataFrame:
 
 `df.columns`
