@@ -191,3 +191,17 @@ Returns a basic correlation method across all columns.
 
 
 
+## References
+
+I used a bunch of different DataScience blogs and articles to throw this together. Here are the main ones:
+
+Histograms: 
+ - https://data36.com/plot-histogram-python-pandas/
+
+Correlation
+ - https://re-thought.com/exploring-correlation-in-python/
+ - https://datatofish.com/correlation-matrix-pandas/
+ - https://towardsdatascience.com/correlation-is-simple-with-seaborn-and-pandas-28c28e92701e
+
+Scatter plots:
+ - https://data36.com/scatter-plot-pandas-matplotlib/
